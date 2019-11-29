@@ -1,0 +1,151 @@
+Exercice 34
+question 2 :
+I : x2<=3:
+#Rajouter dans le contrainte
+  m.addConstr(x[1]<=3)
+  Solution optimale:
+('x1', '=', 0.5000000000000001)
+('x2', '=', 3.0)
+('x3', '=', 0.5)
+('Valeur de la fonction objectif :', 14.5)
+  
+II: x2>=4
+#Rajouter dans le contrainte
+  m.addConstr(x[1]>=4)
+  Solution optimale:
+('x1', '=', 0.3333333333333333)
+('x2', '=', 4.0)
+('x3', '=', 0.0)
+
+('Valeur de la fonction objectif :', 14.333333333333332)
+
+  
+III(I): x1>=1:
+Solution optimale:
+('x1', '=', 1.0)
+('x2', '=', 0.0)
+('x3', '=', 2.3333333333333335)
+('Valeur de la fonction objectif :', 16.333333333333336)
+
+IV(I):x1<=0:
+Solution optimale:
+('x1', '=', 0.0)
+('x2', '=', 3.0)
+('x3', '=', 2.0)
+
+('Valeur de la fonction objectif :', 17.0)
+
+V(II):x1>=1:
+Solution optimale:
+('x1', '=', 1.0)
+('x2', '=', 4.0)
+('x3', '=', 0.0)
+
+('Valeur de la fonction objectif :', 19.0)
+
+VI(II):x1<=0:
+Solution optimale:
+('x1', '=', 0.0)
+('x2', '=', 5.0)
+('x3', '=', 0.0)
+
+('Valeur de la fonction objectif :', 15.0)(OPT)
+
+Q2:
+vtype=GRB.CONTINUE->vtype=GRB.INTEGER
+
+Solution optimale:
+('x1', '=', 0.0)
+('x2', '=', 5.0)
+('x3', '=', -0.0)
+
+('Valeur de la fonction objectif :', 15.0)
+
+Q3:
+# Matrice des contraintes
+a = [[3,1],
+     [2,1],
+     [3,1]]
+
+# Second membre
+b = [7, 3,4]
+
+# Coefficients de la fonction objectif
+c = [8,5]
+
+Solution optimale:
+('x1', '=', 0.3999999999999999)
+('x2', '=', 2.2)
+
+('Valeur de la fonction objectif :', 14.2)
+
+vtype=GRB.CONTINUE->vtype=GRB.INTEGER
+Solution optimale:
+('x1', '=', 1.0)
+('x2', '=', 1.0)
+
+('Valeur de la fonction objectif :', 13.0)
+
+Exercice33
+instance original:
+a = [[1,0,0,0,0,0,4 ,1 ],
+     [1,0,0,0,0,0,-4,-1],
+     [0,1,0,0,0,0,17,1 ],
+     [0,1,0,0,0,0,-17,-1 ],
+     [0,0,1,0,0,0,37,1],
+     [0,0,1,0,0,0,-37,-1],
+     [0,0,0,1,0,0,55,1],
+     [0,0,0,1,0,0,-55,-1],
+     [0,0,0,0,1,0,88,1],
+     [0,0,0,0,1,0,-88,-1],
+     [0,0,0,0,0,1,96,1],
+     [0,0,0,0,0,1,-96,-1]]
+
+# Second membre
+b = [11,-11,25,-25,46,-46,48,-48,65,-65,71,-71 ]
+
+# Coefficients de la fonction objectif
+c = [1,1,1,1,1,1,0,0]
+Solution optimale:
+('x1', '=', 6.4303797468354436)
+('x2', '=', 0.0)
+('x3', '=', 9.354430379746834)
+('x4', '=', 0.8734177215189902)
+('x5', '=', 1.3417721518987378)
+('x6', '=', 0.0)
+('x7', '=', 0.5822784810126582)
+('x8', '=', 15.10126582278481)
+('Valeur de la fonction objectif :', 18.000000000000007)
+
+(96,71)->(14,97)
+a = [[1,0,0,0,0,0,4 ,1 ],
+     [1,0,0,0,0,0,-4,-1],
+     [0,1,0,0,0,0,17,1 ],
+     [0,1,0,0,0,0,-17,-1 ],
+     [0,0,1,0,0,0,37,1],
+     [0,0,1,0,0,0,-37,-1],
+     [0,0,0,1,0,0,55,1],
+     [0,0,0,1,0,0,-55,-1],
+     [0,0,0,0,1,0,88,1],
+     [0,0,0,0,1,0,-88,-1],
+     [0,0,0,0,0,1,14,1],
+     [0,0,0,0,0,1,-14,-1]]
+
+# Second membre
+b = [11,-11,25,-25,46,-46,48,-48,65,-65,97,-97 ]
+
+# Coefficients de la fonction objectif
+c = [1,1,1,1,1,1,0,0]
+
+
+Solution optimale:
+('x1', '=', 10.72727272727274)
+('x2', '=', 3.4242424242424363)
+('x3', '=', 7.272727272727266)
+('x4', '=', 0.0)
+('x5', '=', 0.0)
+('x6', '=', 70.12121212121211)
+('x7', '=', 0.5151515151515149)
+('x8', '=', 19.666666666666682)
+
+('Valeur de la fonction objectif :', 91.54545454545456)
